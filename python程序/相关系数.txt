@@ -1,0 +1,3 @@
+10个点：SpearmanrResult(correlation=0.55025864493074839, pvalue=2.8978803985131413e-67)
+17个点：SpearmanrResult(correlation=0.65170700842805607, pvalue=4.1287145301858785e-102)
+The classify accuracy is: 82.994%
