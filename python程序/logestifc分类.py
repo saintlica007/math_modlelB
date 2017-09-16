@@ -96,7 +96,7 @@ test_x = train_x; test_y = train_y
 
 ## step 2: training...
 print("step 2: training...")
-opts = {'alpha': 0.01, 'maxIter': 20, 'optimizeType': 'smoothStocGradDescent'}
+opts = {'alpha': 0.001, 'maxIter': 800, 'optimizeType': 'smoothStocGradDescent'}
 optimalWeights = trainLogRegres(train_x, train_y, opts)
 
 ## step 3: testing
