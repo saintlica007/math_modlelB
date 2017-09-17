@@ -2,7 +2,7 @@ import numpy as np
 from sklearn import linear_model, datasets
 import matplotlib.pyplot as plt
 from scipy.stats import norm
-l=list(open('dis3.txt'))
+l=list(open('dis4.txt'))
 x=[]
 y=[]
 for i in l:
@@ -27,8 +27,8 @@ def lr_model(clf, X):
     return 1.0 / (1.0 + np.exp(-(n[0])))
 #----plot---------------------------    
 plt.figure(figsize=(10, 5))
-plt.scatter(X, y)
-plt.plot(X, lr_model(logclf, X).ravel(),"+",color="c")
+plt.scatter(X, y,2,color="b")
+plt.plot(X, lr_model(logclf, X).ravel(),"+",color="r")
 plt.xlabel("feature value")
 plt.ylabel("class")
 plt.title("logistic fit")

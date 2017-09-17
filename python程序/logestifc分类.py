@@ -66,9 +66,9 @@ def showLogRegres(weights, train_x, train_y):
 	# draw all samples
 	for i in range(numSamples):
 		if int(train_y[i, 0]) == 0:
-			plt.plot(train_x[i, 1], train_x[i, 2], 'or')
+			plt.plot(train_x[i, 1], train_x[i, 2],12, 'or')
 		elif int(train_y[i, 0]) == 1:
-			plt.plot(train_x[i, 1], train_x[i, 2], 'ob')
+			plt.plot(train_x[i, 1], train_x[i, 2],12, 'ob')
 	# draw the classify line
 	min_x = min(train_x[:, 1])[0, 0]
 	max_x = max(train_x[:, 1])[0, 0]
@@ -96,7 +96,7 @@ test_x = train_x; test_y = train_y
 
 ## step 2: training...
 print("step 2: training...")
-opts = {'alpha': 0.001, 'maxIter': 800, 'optimizeType': 'smoothStocGradDescent'}
+opts = {'alpha': 0.02, 'maxIter': 800, 'optimizeType': 'smoothStocGradDescent'}
 optimalWeights = trainLogRegres(train_x, train_y, opts)
 
 ## step 3: testing
