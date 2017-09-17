@@ -5,19 +5,20 @@ from sklearn.cluster import DBSCAN
 from sklearn import metrics
 from sklearn.datasets.samples_generator import make_blobs
 from sklearn.preprocessing import StandardScaler
-l=list(open('fj3da.txt'))
+l=list(open('ex3data2.txt'))
 s=[]
 x=[]
+uop=[]
+xx=[]
 for i in l:
     k=i.split()
     k[0],k[1]=float(k[1]),float(k[0])
     k[0]=k[0]/cos(pi*(k[1]/180))
-    x.append(k)
-
+    x.append(k[0:2])
+    xx.append(k[1])
+    uop.append(k[2])
 #生产数据
 X=np.array(x)
-#对数据进行标准化
-#X = StandardScaler().fit_transform(x)
 
 #计算
 db = DBSCAN(eps=0.005,min_samples=5).fit(X)
@@ -48,7 +49,9 @@ for i in range(0,len(s)):
     for k in s[i]:
         k=list(k)
         for b in range(0,len(k)):
+            ind=xx.index(k[1])
             k[b]=str(k[b])
+        k.append(uop[ind])
         sty.append("\t".join(k))
     f.write("\n".join(sty))
     f.close()
