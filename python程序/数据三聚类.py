@@ -41,7 +41,17 @@ for k,col in zip(unique_labels,colors):
     plt.plot(xy[:, 0], xy[:, 1], 'o', markerfacecolor=col,
              markeredgecolor='k', markersize=2)
     s.append(list(xy))
-
+print(s)
+for i in range(0,len(s)):
+    f=open(".\分类\分类%d.txt"%(i),"w")
+    sty=[]
+    for k in s[i]:
+        k=list(k)
+        for b in range(0,len(k)):
+            k[b]=str(k[b])
+        sty.append("\t".join(k))
+    f.write("\n".join(sty))
+    f.close()
 plt.title('Estimated number of clusters: %d' % n_clusters_)
 plt.show()
 
