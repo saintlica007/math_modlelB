@@ -136,13 +136,13 @@ def predict(data):
 
 #预测输出文件
 print(predict([1/1,15000]))
-l=list(open('nh2.txt'))
+l=list(open('nhc3.txt'))
 s=[]
 for i in l:
     k=i.split()
     k.append(str(predict([float(k[0]),float(k[1])])))
     s.append(k[2])
-f=open("prejg.txt","w")
+f=open("prec1.txt","w")
 f.write("\n".join(s))
 f.close()
 

@@ -7,7 +7,7 @@ def haversine(lat1,lon1,lat2,lon2):
     c=2*asin(sqrt(a))
     r=6371
     return c *r*1000
-l=list(open('fj1.txt'))
+l=list(open('ex3data1.txt'))
 cen=list(open('centerpoints.txt'))
 loc=[]
 pr=[]
@@ -19,15 +19,15 @@ for i in cen:
 for i in l:
     k=i.split()
     k[0],k[1]=float(k[0]),float(k[1])
-    pr.append(float(k[2]))
+    #pr.append(float(k[2]))
     des=[]
     for te in ce:
         des.append(haversine(k[0],k[1],te[0],te[1]))
     des.sort()
     #inde=kk.index(des[0])
     #if des[0]<3000 and float(k[2])<66:
-    loc.append(str(des[0])+"\t"+str(k[2]))
-f=open("dis2.txt","w")
+    loc.append(str(des[0])+"\t")#str(k[2]
+f=open("ex3dat.txt","w")
 f.write("\n".join(loc))
 f.close()
 

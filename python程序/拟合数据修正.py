@@ -7,8 +7,8 @@ def haversine(lat1,lon1,lat2,lon2):
     c=2*asin(sqrt(a))
     r=6371
     return c *r*1000
-l=list(open('predic2.txt'))
-cen=list(open('prejg.txt'))
+l=list(open('ex3datapr.txt'))
+cen=list(open('prec1.txt'))
 ciy=list(open('cities.txt'))
 loc=[]
 ci=[]
@@ -34,7 +34,7 @@ for i in range(0,len(l)):
     pr[i]=pr[i]*(ci[ind][2]/ci[1][2]) #价格缩放
     k.append(str(pr[i]))
     loc.append("\t".join(k))
-f=open("resul1.txt","w")
+f=open("resulc.txt","w")
 f.write("\n".join(loc))
 f.close()
 

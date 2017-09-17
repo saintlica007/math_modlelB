@@ -7,7 +7,7 @@ def haversine(lat1,lon1,lat2,lon2):
     c=2*asin(sqrt(a))
     r=6371
     return c *r*1000
-l=list(open('predic1.txt'))
+l=list(open('ex3data2.txt'))
 cen=list(open('ex2data2.txt'))
 loc=[]
 ci=[]
@@ -24,7 +24,7 @@ for i in l:
             des=des+te[2]
     if des>0:
         loc.append("\t".join(k))
-f=open("predic2.txt","w")
+f=open("ex3datapr.txt","w")
 f.write("\n".join(loc))
 f.close()
 
