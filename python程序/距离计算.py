@@ -44,6 +44,4 @@ f=open("dis.txt","w")
 for i in range(0,len(loc)):
     loc[i]=str(loc[i])
 f.write("\n".join(loc))
-f.close()
-
-    
+f.close() 

@@ -1,10 +1,8 @@
-# -*- coding: utf-8 -*-
 from sklearn.cluster import KMeans
 from sklearn.externals import joblib
 import numpy
 import time
 import matplotlib.pyplot as plt
- 
 if __name__ == '__main__':
     ## step 1: 加载数据
     print("step 1: load data...")
@@ -13,10 +11,9 @@ if __name__ == '__main__':
     for line in fileIn.readlines():
         lineArr = line.strip().split()
         dataSet.append([float(lineArr[0]), float(lineArr[1])])
- 
     #设定不同k值以运算
     for k in range(7,8):
-        clf = KMeans(n_clusters=k) #设定k  ！！！！！！！！！！这里就是调用KMeans算法
+        clf = KMeans(n_clusters=k) #就是调用KMeans算法
         s = clf.fit(dataSet) #加载数据集合
         numSamples=len(dataSet)
         centroids = clf.labels_

@@ -26,6 +26,4 @@ for i in l:
         loc.append("\t".join(k))
 f=open("ex3datapr.txt","w")
 f.write("\n".join(loc))
-f.close()
-
-    
+f.close()   

@@ -1,4 +1,3 @@
-#导入必要的模块  
 import numpy as np  
 import matplotlib.pyplot as plt
 l=list(open('zb2.txt'))

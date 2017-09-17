@@ -36,6 +36,4 @@ for i in range(0,len(l)):
     loc.append("\t".join(k))
 f=open("resulc.txt","w")
 f.write("\n".join(loc))
-f.close()
-
-    
+f.close()   
